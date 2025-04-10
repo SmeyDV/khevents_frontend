@@ -15,8 +15,8 @@ export default function SiteFooter() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
-              <span className="text-lg sm:text-xl font-serif font-bold italic text-primary-foreground">
-                {t("app.name")}
+              <span className="text-lg sm:text-xl font-sans font-bold text-primary-foreground">
+                {t("KhEvents")}
               </span>
             </div>
             <p className="text-sm text-primary-foreground/70">{t("footer.description")}</p>

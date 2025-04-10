@@ -1,14 +1,19 @@
-import { useState } from "react"
+"use client"
+import { use,useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Calendar, MapPin, Tag, Clock, Share2, Heart, ChevronLeft } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import BookingModal from "@/components/booking-modal"
+export default function EventDetailPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = use(params)
 
-export default function EventDetailPage({ params }: { params: { slug: string } }) {
-  // This would normally fetch data based on the slug
-  const eventTitle = params.slug
+  const eventTitle = slug
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ")

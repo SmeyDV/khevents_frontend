@@ -16,8 +16,8 @@ export default function SiteHeader() {
     <header className="sticky top-0 z-50 bg-background border-b">
       <div className="container flex items-center justify-between h-16 px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-          <span className="text-lg sm:text-xl font-serif font-bold">KhEvents</span>
+        <img src="pictures/logo.svg" alt="KhEvents Logo" className="w-auto h-48 object-contain" />
+          {/* <span className="text-lg sm:text-xl font-sans font-bold">KhEvents</span> */}
         </Link>
 
         {/* Desktop Navigation */}
@@ -51,9 +51,9 @@ export default function SiteHeader() {
           </div>
 
           {/* Mobile Menu */}
-          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen} className="md:hidden">
+          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" aria-label="Menu">
+              <Button variant="ghost" size="icon" aria-label="Menu" className="md:hidden">
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
